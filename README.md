@@ -16,6 +16,13 @@ k8s/
 │   ├── 02-intermediate/            (9 lessons incl. capstone)
 │   ├── 03-advanced/                (9 lessons incl. capstone)
 │   └── 04-expert/                  (8 lessons incl. capstone)
+├── 05-operations-troubleshooting/ ← standalone, symptom-first incident guide, usable without the course
+│   ├── 01-operations-troubleshooting-start-here.md
+│   ├── 02-troubleshooting-pod-not-starting.md
+│   ├── 03-troubleshooting-crashloop-and-restarts.md
+│   ├── 04-troubleshooting-networking-and-503s.md
+│   ├── 05-troubleshooting-slow-performance-and-resources.md
+│   └── 06-troubleshooting-storage-and-config.md
 └── reference/                     ← standalone lookup pages, not part of the level progression
     ├── command-cheat-sheet.md
     ├── incident-runbook-template.md
@@ -86,6 +93,19 @@ The course is level-first: each level is a sequence of lessons that mixes concep
 
 Every lesson body includes, in order: a **Prerequisites** callout, core concepts (with tables and Mermaid diagrams where they clarify structure/flow), full copy-pasteable commands, a **Lab** section for hands-on practice, and a **Checkpoint** self-assessment at the bottom. Site-level navigation (prev/next, breadcrumbs, sidebar) is left entirely to the framework via front matter — lesson bodies contain no manual navigation links.
 
+## Operations & Troubleshooting section
+
+A standalone, symptom-first incident guide, deliberately **not** part of the level progression, usable by someone who has never read any other page in this course. Where the level lessons teach concepts in depth with labs, these pages are written for someone mid-incident: every command is inline with a plain-English explanation of what it does and why you're running it, so there's no jumping to another lesson to understand a step. Each page still uses the same `layout: web/course-reading` schema as level lessons (no `level`/`module`/`lesson`/`order`/`prerequisites` fields needed, similar to `reference/`), since it sits outside the sequential progression.
+
+| Page | Use it when... |
+|---|---|
+| [Start Here](_course/05-operations-troubleshooting/01-operations-troubleshooting-start-here.md) | Something is broken and you don't know where to look yet, first 5-minute health check plus a symptom router |
+| [Pod Won't Start](_course/05-operations-troubleshooting/02-troubleshooting-pod-not-starting.md) | `Pending`, `ImagePullBackOff`, or a pod stuck in `ContainerCreating` |
+| [CrashLoopBackOff & Restarts](_course/05-operations-troubleshooting/03-troubleshooting-crashloop-and-restarts.md) | A pod starts, then restarts repeatedly |
+| [Networking, DNS & 503s](_course/05-operations-troubleshooting/04-troubleshooting-networking-and-503s.md) | 503s, connection refused, timeouts, or DNS failures between services |
+| [Slow Performance & Resources](_course/05-operations-troubleshooting/05-troubleshooting-slow-performance-and-resources.md) | Requests are slow, CPU/memory look pegged, or autoscaling misbehaves |
+| [Storage, ConfigMaps & Secrets](_course/05-operations-troubleshooting/06-troubleshooting-storage-and-config.md) | A PVC won't bind, a volume won't mount, or a config change isn't taking effect |
+
 ## Reference section
 
 Standalone, non-sequential lookup material:
@@ -99,4 +119,4 @@ Standalone, non-sequential lookup material:
 
 ## Total content
 
-40 pages: 2 Getting Started + 34 level lessons (8+9+9+8) + 4 Reference pages.
+46 pages: 2 Getting Started + 34 level lessons (8+9+9+8) + 6 Operations & Troubleshooting pages + 4 Reference pages.

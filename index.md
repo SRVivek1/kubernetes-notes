@@ -33,14 +33,15 @@ Every lesson ships with copy-pasteable commands, a hands-on lab, and a checkpoin
 
 ## Course Sections
 
-The course is organized into six progressive sections. Getting Started covers setup, Beginner through Expert build troubleshooting depth in stages, and Reference holds standalone lookup material for day-to-day operations.
+The course is organized into seven progressive sections. Getting Started covers setup, Beginner through Expert build troubleshooting depth in stages, Operations & Troubleshooting is a standalone, symptom-first incident guide usable without reading the rest of the course, and Reference holds standalone lookup material for day-to-day operations.
 
 1. **Getting Started:** course overview, prerequisites, local lab setup with kind or minikube, and a tool installation guide for jq, k9s, Istio, JVM tools, and more.
 2. **Beginner:** core K8s objects, first Spring Boot deploy, reading pod status, resource limits, and a broken-deployment capstone.
 3. **Intermediate:** probes, exit codes, DNS, config propagation, storage, RBAC, JVM-in-container basics, and an on-call simulation capstone.
 4. **Advanced:** thread and heap dumps, GC tuning, CPU profiling, service mesh troubleshooting, observability, and a production incident capstone.
 5. **Expert:** cluster internals, admission webhooks, packet capture, cloud-managed clusters (EKS/GKE/AKS), GitOps, chaos engineering, incident command, and a full game-day capstone.
-6. **Reference:** command cheat sheet, incident runbook template, hands-on lab ideas, and assessment rubric.
+6. **Operations & Troubleshooting:** a self-contained, end-to-end triage guide, start with a 5-minute health check, then follow a symptom router straight to the fix for pods that won't start, crash loops, networking/503s, slow performance, or storage and config issues, no prior lessons required.
+7. **Reference:** command cheat sheet, incident runbook template, hands-on lab ideas, and assessment rubric.
 
 ---
 
